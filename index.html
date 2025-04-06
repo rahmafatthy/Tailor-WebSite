@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Tailor</title>
+    <link rel="icon" type="image/png" href="images/check.png">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,6 +18,10 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+     <section class="preloader">
+    <section class="preloader-circle"></section>
+    <img src="images/loder.png" alt="">
+  </section>
     <!-----------NavBar------------->
     <header>
       <a href="#" class="logo"><img src="images/logo.png" alt="" /></a>
@@ -49,8 +54,10 @@
     </section>
     <main>
       <section class="offer">
-        <section class="offer-img">
-          <img src="images/offers1.png" alt="" />
+        <section class="img-container">
+          <section class="offer-img">
+            <img src="images/offers1.png" alt="" />
+          </section>
         </section>
         <section class="offer-content">
           <span>1</span>
@@ -62,8 +69,10 @@
         </section>
       </section>
       <section class="offer">
-        <section class="offer-img">
-          <img src="images/offers2.png" alt="" />
+        <section class="img-container">
+          <section class="offer-img">
+            <img src="images/offers2.png" alt="" />
+          </section>
         </section>
         <section class="offer-content">
           <span>2</span>
@@ -75,8 +84,10 @@
         </section>
       </section>
       <section class="offer">
-        <section class="offer-img">
-          <img src="images/offers3.png" alt="" />
+        <section class="img-container">
+          <section class="offer-img">
+            <img src="images/offers3.png" alt="" />
+          </section>
         </section>
         <section class="offer-content">
           <span>3</span>
@@ -175,55 +186,70 @@
     </section>
 
     <section class="media">
-      <video
-        class="video-section"
-        src="media/العيد فرحة ...أهلا اهلا بالعيد صفاء ابو السعود.mp4"
-        controls
-        poster="images/video-bg.png"
-      ></video>
-      <img
-        src="images/play-button.png"
-        class="logo-overlay"
-        alt="Logo"
-        onclick="playVideo()"
-      />
-    </section>
-    <section class="slider">
-        <section class="slider-section-one">
-        <section class="slider-data">
-          <section class="slider-img"> <img src="images/quotes-sign.png"></section>
-          <section class="slider-content">
-            <p>Brook presents your services with flexible, convenient and cdpose layouts. You can select your favorite layouts & elements for cular ts with unlimited
-              ustomization possibilities. Pixel-perfect replica;ition of thei designers ijtls intended csents your se.</p>
-          </section>
-          <section class="row">
-            <section class="profile-pic">
-              <img src="images/testimonial.png">
-            </section>
-            <section class="row-content">
-              <span>Robart Brown</span>
-              <p>Creative designer at Colorlib</p>
-            </section>
-          </section>
-        </section>
-        </section>
-       
-    </section>
-    <section class="contact">
-     
-      <section class="contact-head">
-        <h2>Follow us on Instagram</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
-          Suspendisse varius enim in eros.
-        </p>
+      <section class="video-container">
+          <button class="play-button" id="playButton"></button>
+          <video id="video" poster="images/video-bg.png" controls>
+              <source src="media/العيد فرحة ...أهلا اهلا بالعيد صفاء ابو السعود.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
       </section>
-      <section class="contact-body">
-        <img src="images/instra1.png" />
-        <img src="images/instra2.png" />
-      </section>
-    </section>
+  </section>
+  
 
+
+   
+  <section class="feedback-container">
+    <section class="feedback">
+      <section class="content-text">
+        <!-- <img class="quotes" src="./images/quotes-sign.png"> -->
+        <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos rerum culpa blanditiis natus voluptatibus beatae
+        ea aliquid, quisquam provident voluptate molestiae vel, incidunt minus labore sint totam nemo? Molestias, sit!</p>
+      </section>
+      <section class="person-info">
+        <img src="./images/testimonial.png">
+        <p class="first-p">Robert Brawn</p>
+        <p class="second-p"> Creative Designer at Colorib</p>
+      </section>
+   
+    </section>
+ 
+    <section class="feedback">
+     <section class="content-text">
+       <!-- <img class="quotes" src="./images/quotes-sign.png"> -->
+       <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos rerum culpa blanditiis natus voluptatibus beatae
+       ea aliquid, quisquam provident voluptate molestiae vel, incidunt minus labore sint totam nemo? Molestias, sit!</p>
+     </section>
+     <section class="person-info">
+       <img src="./images/testimonial.png">
+       <p class="first-p">Robert Brawn</p>
+       <p class="second-p"> Creative Designer at Colorib</p>
+     </section>
+   
+   </section>
+ 
+   <section class="controls">
+     <button   class="left">←</button>
+     <button class="right">→</button>
+   </section>
+   </section>
+
+  <section class="contact">
+    <section class="contact-head">
+      <h2>Follow us on Instagram</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
+        Suspendisse varius enim in eros.
+      </p>
+    </section>
+    <section class="contact-body">
+      <div class="insta-container">
+        <img class="insta" src="images/instra1.png" alt="Instagram post 1">
+      </div>
+      <div class="insta-container">
+        <img class="insta" src="images/instra2.png" alt="Instagram post 2">
+      </div>
+    </section>
+  </section>
     <footer>
       <section class="footer-img">
         <img src="images/map.png" />
@@ -233,9 +259,9 @@
           <img src="images/logo2_footer.png" />
         </section>
         <section class="footer-first-column-data">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+          <h4>Lorem ipsum dolor sit amet, consectetur adipiscing.</h4>
           <h3><a class="footer" href="">(80) 783 367-3904</a></h3>
-         <p> <a class="mini-link">(80) 783 367-3904</a></p>
+          <p><a class="mini-link">(80) 783 367-3904</a></p>
           <section class="logos">
             <ul>
               <li><img src="images/twitter.png" /></li>
